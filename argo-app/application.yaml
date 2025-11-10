@@ -8,9 +8,11 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/my-org/myrepo.git
+    repoURL: https://github.com/Tabbukhan/Argo-CD-App-Deployment.git
     path: app
     targetRevision: main
   project: default
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
+      selfHeal: true
